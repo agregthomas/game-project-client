@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
     <head>
-      <title>Example</title>
+      <title>Greg's Tic-Tac-OH NO!</title>
       <meta name="viewport" content="width=device-width, initial-scale=1">
 
       <!-- Do not add `link` tags-->
@@ -12,6 +12,107 @@
       <script src="public/application.js" type="text/javascript" charset="utf-8" defer></script>
     </head>
     <body>
-      <h1>Browser Template</h1>
+      <header>
+        <h1>Header</h1>
+        <form id="quick-sign-in">
+          <input
+            type="submit"
+            value="Quick Sign-In" />
+        </form>
+      </header>
+      <hr>
+      <div class="logged-in">
+        <h2>Change Password</h2>
+        <form id="change-password">
+          <input
+            type="password"
+            name="passwords[old]"
+            placeholder="Enter your current password" />
+          <input
+            type="password"
+            name="passwords[new]"
+            placeholder="Enter your new password" />
+          <input
+            type="submit"
+            value="Change Password" />
+        </form>
+        <hr>
+      </div>
+      <div class="logged-in">
+        <h2>Sign Out</h2>
+        <button id="sign-out" type="button">
+        Logout
+        </button>
+        <hr>
+      </div>
+      <div class="logged-out">
+        <h2>Authenticate</h2>
+        <form id="sign-up">
+          <input
+          type="email"
+          name="credentials[email]"
+          placeholder="Enter your email" />
+          <input
+            type="password"
+            name="credentials[password]"
+            placeholder="Enter password" />
+          <input hidden class="confirm"
+            type="password"
+            name="credentials[password_confirmation]"
+            placeholder="Confirm password" />
+            <input
+              id="sign-in-button"
+              type="submit"
+              value="Sign In" />
+          <input
+            id="sign-up-button"
+            type="submit"
+            value="Sign Up" />
+        </form>
+        <hr>
+      </div>
+      <div class="logged-in">
+        <h2>Game Board</h2>
+        <div class="container">
+          <div class="row" id="board">
+            <div class="col-4 box" data-index="0">0</div>
+            <div class="col-4 box" data-index="1">1</div>
+            <div class="col-4 box" data-index="2">2</div>
+            <div class="col-4 box" data-index="3">3</div>
+            <div class="col-4 box" data-index="4">4</div>
+            <div class="col-4 box" data-index="5">5</div>
+            <div class="col-4 box" data-index="6">6</div>
+            <div class="col-4 box" data-index="7">7</div>
+            <div class="col-4 box" data-index="8">8</div>
+          </div>
+        </div>
+        <hr>
+      </div>
+      <div>
+        <h2>User Feedback</h2>
+        <div id="results">
+          <p>Results here</p>
+        </div>
+        <hr>
+      </div>
+      <div class="logged-in">
+        <h2>New Game</h2>
+        <div>
+          <button id="new-game"
+          type="button">
+          New Game
+        </button>
+        </div>
+        <hr>
+      </div>
+      <div class="logged-in">
+        <h2>Game History</h2>
+        <div id="history">
+        </div>
+        <hr>
+      </div>
+      <footer>
+        <h1>Footer</h1>
+      </footer>
     </body>
 </html>
