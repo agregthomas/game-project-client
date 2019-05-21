@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html>
+    <head>
+      <title>Greg's Tic-Tac-RUH-ROH!</title>
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+
+      <!-- Do not add `link` tags-->
+      <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+
+      <!-- Do not add `script` tags-->
+      <script src="public/vendor.js" type="text/javascript" charset="utf-8" defer></script>
+      <script src="public/application.js" type="text/javascript" charset="utf-8" defer></script>
+    </head>
+    <body>
+      <header>
+        <h1>Tic-Tac-RUH-ROH!</h1>
+        <form id="quick-sign-in" hidden>
+          <input
+            type="submit"
+            value="Quick Sign-In" />
+        </form>
+        <form id="complete-all" class="logged-in">
+          <input
+            type="submit"
+            value="Complete All Games" />
+        </form>
+      </header>
+      <hr>
+      <div class="logged-in">
+        <h2>Change Password</h2>
+        <form id="change-password">
+          <input
+            type="password"
+            name="passwords[old]"
+            placeholder="Enter your current password" />
+          <input
+            type="password"
+            name="passwords[new]"
+            placeholder="Enter your new password" />
+          <input
+            type="submit"
+            value="Change Password" />
+        </form>
+        <hr>
+      </div>
+      <div class="logged-in">
+        <h2>Sign Out</h2>
+        <button id="sign-out" type="button">
+        Logout
+        </button>
+        <hr>
+      </div>
+      <div class="logged-out">
+        <h2>Authenticate</h2>
+        <form id="sign-up">
+          <input
+          type="email"
+          name="credentials[email]"
+          placeholder="Enter your email" />
+          <input
+            type="password"
+            name="credentials[password]"
+            placeholder="Enter password" />
+          <input hidden class="confirm"
+            type="password"
+            name="credentials[password_confirmation]"
+            placeholder="Confirm password" />
+            <input
+              id="sign-in-button"
+              type="submit"
+              value="Sign In" />
+          <input
+            id="sign-up-button"
+            type="submit"
+            value="Sign Up" />
+        </form>
+        <hr>
+      </div>
+      <div class="logged-in">
+        <h2>Game Board</h2>
+        <button id="bomb" type="button">
+        RUH-ROH
+        </button>
+        <div class="container">
+          <div class="row" id="board">
+            <div class="col-4 box" data-index="0">0</div>
+            <div class="col-4 box" data-index="1">1</div>
+            <div class="col-4 box" data-index="2">2</div>
+            <div class="col-4 box" data-index="3">3</div>
+            <div class="col-4 box" data-index="4">4</div>
+            <div class="col-4 box" data-index="5">5</div>
+            <div class="col-4 box" data-index="6">6</div>
+            <div class="col-4 box" data-index="7">7</div>
+            <div class="col-4 box" data-index="8">8</div>
+          </div>
+        </div>
+        <hr>
+      </div>
+      <div>
+        <h2>User Feedback</h2>
+        <div id="results">
+        </div>
+        <hr>
+    </div>
+    <div class="logged-in">
+      <h2>New Game</h2>
+      <div>
+        <button id="new-game"
+        type="button">
+        New Game
+      </button>
+      </div>
+      <hr>
+    </div>
+    <div class="logged-in">
+      <h2>Game History</h2>
+      <div id="history">
+      </div>
+      <hr>
+    </div>
+    <div id="myModal" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+      <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+          <h3 id="myModalLabel">Modal header</h3>
+      </div>
+      <div class="modal-body">
+          <p>One fine body…</p>
+      </div>
+      <div class="modal-footer">
+          <button class="btn" data-dismiss="modal" aria-hidden="true">Close</button>
+      </div>
+    </div>
+    <footer>
+      <h3>This site is under construction, check back soon!</h3>
+    </footer>
+  </body>
+</html>
