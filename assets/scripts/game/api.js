@@ -34,8 +34,20 @@ const move = (boxData) => {
   })
 }
 
+const complete = (boxData, id) => {
+  return $.ajax({
+    url: config.apiUrl + '/games/' + id,
+    method: 'PATCH',
+    headers: {
+      Authorization: `Token token=${store.user.token}`
+    },
+    data: boxData
+  })
+}
+
 module.exports = {
   all,
   newGame,
-  move
+  move,
+  complete
 }

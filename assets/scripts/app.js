@@ -14,4 +14,7 @@ $(() => {
   // Game handlers!
   $('#new-game').on('click', gameEvents.onCreateGame)
   $('#board').on('click', gameEvents.onMove)
+  $('[data-index]').hover(gameEvents.onMouseIn, gameEvents.onMouseOut)
+  $('#complete-all').on('submit', gameEvents.completeAll)
+  $('#bomb').on('click', gameEvents.onBomb)
 })

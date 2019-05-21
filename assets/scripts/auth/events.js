@@ -24,8 +24,6 @@ const onSignIn = (event) => {
   const form = event.target.parentNode
   const formData = getFormFields(form)
 
-  console.log(formData)
-
   api.signIn(formData)
     .then((responseData) => {
       ui.onSignInSuccess(responseData)
