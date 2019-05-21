@@ -39,11 +39,11 @@ const winCheck = (bombCheck) => {
   // FOR BOMB!
   (bombCheck) {
     if (store.curValue === 'o') {
-      store.winner = store.user.email
+      store.winner = 'Player 2'
       store.curGame.over = true
       return `<p>Somebody set you up the bomb Player 2, ${store.user.email} wins!</p>`
     } else {
-      store.winner = 'Player 2'
+      store.winner = store.user.email
       store.curGame.over = true
       return `<p>Somebody set you up the bomb ${store.user.email}, Player 2 wins!</p>`
     }

@@ -10,7 +10,6 @@ const onBomb = (event) => {
   const int = Math.floor(Math.random() * Math.floor(8))
 
   store.bomb = int.toString()
-  console.log(store.bomb)
 
   $('#bomb').prop('hidden', true)
 }
@@ -133,10 +132,8 @@ const completeAll = (event) => {
         }
 
         api.complete(boxData, id)
-          .then((responseData2) => {
-            console.log(responseData2)
-          })
-          .catch(console.log('wah'))
+          .then()
+          .catch()
       })
     })
     .catch()
